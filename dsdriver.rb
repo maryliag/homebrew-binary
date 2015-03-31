@@ -5,7 +5,7 @@ class Dsdriver < Formula
   sha256 "aaa5ee3e8c26c3393e450a9f3214b6fa332db2dea6da3eb1cf68df6a4da2273c"
 
   def install
-    if Dir.exist?('/Applications/dsdriver')
+    if File.directory?("/Applications/dsdriver")
       puts "You already have dsdriver installed on /Applications/dsdriver."
       puts "Please, remove this folder and try again."
     else
