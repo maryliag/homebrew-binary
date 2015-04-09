@@ -11,6 +11,16 @@ class Dsdriver < Formula
     else
       puts "Installing... "
       system "./installDSDriver", prefix
+
+      # create util folder for install validation scripts
+      mkdir_p prefix/"util"
+
+      mv bin/"validate_install.php", prefix/"util/validate_install.php"
+      mv bin/"validate_install.py",  prefix/"util/validate_install.py"
+      mv bin/"validate_install.rb",  prefix/"util/validate_install.rb"
+
+      # remove app file
+      rm_rf bin/"CLPPlus.app"
     end
   end
 
