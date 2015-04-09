@@ -28,5 +28,4 @@ class Dsdriver < Formula
     puts "If the installation worked you should be able to open the application CLPPlus under /Applications"
     system "true"
   end
-
 end
