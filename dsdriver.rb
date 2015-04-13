@@ -12,7 +12,7 @@ class Dsdriver < Formula
       puts "Installing... "
       system "./installDSDriver", prefix
 
-      # create util folder for install validation scripts 
+      # create util folder for install validation scripts
       mkdir_p prefix/"util"
 
       mv bin/"validate_install.php", prefix/"util/validate_install.php"
